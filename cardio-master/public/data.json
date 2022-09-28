@@ -1,0 +1,65 @@
+[
+    {
+        "id": 01,
+        "url": "https://res.cloudinary.com/dxgr1p8tm/image/upload/v1664387138/cardio-workouts/battle-ropes_kcupk7.webp",
+        "name": "Battle Ropes",
+        "duration": 5,
+        "set": 15
+    },
+    {
+        "id": 02,
+        "url": "https://res.cloudinary.com/dxgr1p8tm/image/upload/v1664387138/cardio-workouts/plank-jacks_g9r06v.webp",
+        "name": "Plank Jacks",
+        "duration": 3,
+        "set": 10
+    },
+    {
+        "id": 03,
+        "url": "https://res.cloudinary.com/dxgr1p8tm/image/upload/v1664387138/cardio-workouts/skater-jumps_xinr7n.webp",
+        "name": "Skater Jumps",
+        "duration": 5,
+        "set": 20
+    },
+    {
+        "id": 04,
+        "url": "https://res.cloudinary.com/dxgr1p8tm/image/upload/v1664387138/cardio-workouts/mountain-climbers_jif1oi.webp",
+        "name": "Mountain Climbers",
+        "duration": 8,
+        "set": 25
+    },
+    {
+        "id": 05,
+        "url": "https://res.cloudinary.com/dxgr1p8tm/image/upload/v1664387138/cardio-workouts/best-exercise-bikes_byzicz.webp",
+        "name": "Bicycles ",
+        "duration": 15,
+        "set": 2
+    },
+    {
+        "id": 06,
+        "url": "https://res.cloudinary.com/dxgr1p8tm/image/upload/v1664387138/cardio-workouts/jumping-lunges_okeat0.webp",
+        "name": "Jumping Lunges",
+        "duration": 5,
+        "set": 15
+    },
+    {
+        "id": 07,
+        "url": "https://res.cloudinary.com/dxgr1p8tm/image/upload/v1664387137/cardio-workouts/jumping-jacks_inyeiq.webp",
+        "name": "Jumping Jacks",
+        "duration": 10,
+        "set": 20
+    },
+    {
+        "id": 08,
+        "url": "https://res.cloudinary.com/dxgr1p8tm/image/upload/v1664387137/cardio-workouts/kick-boxing_rfp1rv.webp",
+        "name": "Kick Boxing",
+        "duration": 3,
+        "set": 10
+    },
+    {
+        "id": 09,
+        "url": "https://res.cloudinary.com/dxgr1p8tm/image/upload/v1664387137/cardio-workouts/high-knees_zzb6im.webp",
+        "name": "High Knees",
+        "duration": 5,
+        "set": 10
+    }
+]

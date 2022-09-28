@@ -1,0 +1,17 @@
+.menu-nav {
+
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav img {
+    width: 100px;
+    margin: 0 20px;
+}
+
+
+.menu-nav h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
