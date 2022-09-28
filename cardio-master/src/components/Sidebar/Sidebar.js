@@ -2,16 +2,18 @@ import React from 'react'
 import "./Sidebar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapPin, faWeightScale, faTextHeight } from '@fortawesome/free-solid-svg-icons'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Sidebar = ({ durations }) => {
-
-    console.log(durations)
 
     let totalTime = 0
 
     for (const time of durations) {
         totalTime += time
     }
+
+    const notify = () => toast.warn('✌️ WOW! Activity Complete');
 
 
 
@@ -44,7 +46,18 @@ const Sidebar = ({ durations }) => {
                     <h5>{totalTime} Minute</h5>
                 </div>
                 <div class="d-grid gap-2">
-                    <button className="btn btn-warning text-white btn-lg">Activity Complete</button>
+                    <button onClick={notify} className="btn btn-warning text-white btn-lg">Activity Complete</button>
+                    <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                    />
                 </div>
             </div>
         </>
