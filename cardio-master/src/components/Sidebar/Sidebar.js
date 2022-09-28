@@ -39,9 +39,12 @@ const Sidebar = ({ durations }) => {
                 </div>
 
                 <h2 className='text-warning mb-4'>Exercise Detais</h2>
-                <div className="d-flex align-items-center justify-content-around bg-white py-3 rounded border border-1">
+                <div className="d-flex align-items-center justify-content-around bg-white py-3 rounded border border-1 mb-5">
                     <h5>Time Duration</h5>
                     <h5>{totalTime} Minute</h5>
+                </div>
+                <div class="d-grid gap-2">
+                    <button className="btn btn-warning text-white btn-lg">Activity Complete</button>
                 </div>
             </div>
         </>

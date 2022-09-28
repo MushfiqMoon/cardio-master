@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../logo.webp';
+import logo from '../../logo2.webp';
 import "./Nav.css"
 
 const Nav = () => {
