@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <div className='menu-nav'>
         <img src={logo} alt="logo" />
-        <h1 className='text-danger'>Cardio-Master-Club</h1>
+        <h1 className='text-info'>Cardio-Master-Club</h1>
     </div>
   )
 }
