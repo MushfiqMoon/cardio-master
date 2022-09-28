@@ -20,12 +20,11 @@ const Activities = ({handleCardioAdd}) => {
             <div className="row">
             {
                 datas.map((data, index) =>
-                    <div key={index} className="col-md-4">
+                    <div key={index} className="col-md-4 col-sm-6 col-xs-12">
                         <Card data={data} handleCardioAdd={handleCardioAdd}/>
                     </div>
                 )
             }
-
 
             </div>
             

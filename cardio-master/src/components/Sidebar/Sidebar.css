@@ -2,3 +2,7 @@
     position: sticky;
     top: 20px;
 }
+
+.break-btn{
+    cursor: pointer;
+}

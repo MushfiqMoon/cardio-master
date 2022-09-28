@@ -15,7 +15,14 @@ const Sidebar = ({ durations }) => {
 
     const notify = () => toast.warn('✌️ WOW! Activity Complete');
 
+    const handleBreak = (e) => {
 
+        e.currentTarget.classList.toggle('bg-warning');
+
+        const breaktime = e.target.innerText.slice(0, 2)
+
+        console.log(breaktime)
+    }
 
 
     return (
@@ -45,7 +52,7 @@ const Sidebar = ({ durations }) => {
                     <h5>Time Duration</h5>
                     <h5>{totalTime} Minute</h5>
                 </div>
-                <div class="d-grid gap-2">
+                <div className="d-grid gap-2">
                     <button onClick={notify} className="btn btn-warning text-white btn-lg">Activity Complete</button>
                     <ToastContainer
                         position="bottom-center"
@@ -59,6 +66,16 @@ const Sidebar = ({ durations }) => {
                         pauseOnHover
                     />
                 </div>
+                <div className="d-flex align-items-center justify-content-around bg-white py-3 rounded border border-1 mb-5">
+
+                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>10s</div> 
+                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>20s</div> 
+                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>30s</div> 
+                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>40s</div> 
+                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>50s</div> 
+                </div>
+
+
             </div>
         </>
     )
