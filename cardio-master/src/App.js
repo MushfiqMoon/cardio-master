@@ -7,8 +7,11 @@ function App() {
 
   const [durations, setDurations] = useState("")
 
-  const handleCardioAdd = time => {
-    console.log(time);
+  const handleCardioAdd = (event, time) => {
+
+    // event.target.classList.add('disabled')
+    event.target.innerHTML = "Added"
+
     const newTime = [...durations, time]
     setDurations(newTime)
     console.log(durations);
@@ -18,10 +21,10 @@ function App() {
     <>
       <div className='main-body-area'>
         <div className="content-area">
-          <Activities handleCardioAdd={handleCardioAdd}/>
+          <Activities handleCardioAdd={handleCardioAdd} />
         </div>
         <div className="sidebar-area bg-light">
-          <Sidebar durations={durations}/>
+          <Sidebar durations={durations} />
         </div>
 
       </div>
