@@ -15,7 +15,6 @@ function App() {
 
     const newTime = [...durations, time]
     setDurations(newTime)
-    console.log(durations);
   }
 
   return (
