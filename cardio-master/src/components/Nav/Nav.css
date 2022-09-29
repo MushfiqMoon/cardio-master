@@ -1,7 +1,8 @@
 .menu-nav {
-
     display: flex;
     align-items: center;
+    background: #fff;
+    padding: 10px;
 }
 
 .menu-nav img {

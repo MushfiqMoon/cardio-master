@@ -4,7 +4,7 @@ import "./Nav.css"
 
 const Nav = () => {
   return (
-    <div className='menu-nav my-5'>
+    <div className='menu-nav my-5 rounded border border-1'>
         <img src={logo} alt="logo" />
         <h1 className='text-warning'>Cardio-Master-Club</h1>
     </div>

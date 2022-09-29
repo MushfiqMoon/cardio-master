@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Sidebar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapPin, faWeightScale, faTextHeight } from '@fortawesome/free-solid-svg-icons'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const breaktTimer = [
+const breakTimer = [
     { name: "10s", value: 10 },
     { name: "20s", value: 20 },
     { name: "30s", value: 30 },
@@ -31,9 +31,16 @@ const Sidebar = ({ durations }) => {
 
         setBreakDuration(value);
 
-        let time = value
-
+        // Local Storage
+        localStorage.setItem("break-time", value)
     }
+
+    // Retreave data from local storage 
+    useEffect(() => {
+
+        setBreakDuration(+localStorage.getItem("break-time"))
+
+    }, [])
 
     return (
         <>
@@ -60,7 +67,7 @@ const Sidebar = ({ durations }) => {
                 <h2 className='text-warning mb-4'>Add A Break</h2>
                 <div className="d-flex align-items-center justify-content-around bg-white py-3 rounded border border-1 mb-5">
                     {
-                        breaktTimer.map((breakTime, i) => (
+                        breakTimer.map((breakTime, i) => (
                             <div
                                 key={i}
                                 className={`break-btn text-dark rounded-circle p-2 border border-3 ${breakDuration === breakTime.value ? 'bg-warning' : ''}`}
@@ -70,7 +77,6 @@ const Sidebar = ({ durations }) => {
                             </div>
                         ))
                     }
-
                 </div>
 
                 <h2 className='text-warning mb-4'>Exercise Detais</h2>

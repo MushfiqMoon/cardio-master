@@ -6,8 +6,8 @@ const Blog = () => {
       <div className="col-md-12">
 
         <div className="card mt-5 mb-3">
-          <div className="card-header bg-warning text-white fs-5">
-            How Does React Work
+          <div className="card-header bg-warning fs-5">
+            ⚛️ How does React work
           </div>
           <div className="card-body">
             <p className="card-text">ReactJS divides the UI into isolated reusable pieces of code known as components. React components work similarly to JavaScript functions as they accept arbitrary inputs called properties or props.
@@ -17,19 +17,49 @@ const Blog = () => {
         </div>
 
         <div className="card mb-3">
-          <div className="card-header bg-warning text-white fs-5">
-            Difference between state and props in react
+          <div className="card-header bg-warning fs-5">
+            ⚛️ Difference between <span className='bg-dark p-1 rounded text-white'>props</span> and <span className='bg-dark p-1 rounded text-white'>state</span> in react
           </div>
           <div className="card-body">
             <div className="card-text">
-              <table className="table"><tbody><tr><td><p><strong>PROPS</strong></p></td><td><p><strong>STATE</strong></p></td></tr><tr><td>The Data is passed from one component to another.</td><td>The Data is passed within the component only.</td></tr><tr><td>It is Immutable (cannot be modified).</td><td>It is Mutable ( can be modified).</td></tr><tr><td>Props can be used with state and functional components.</td><td>State can be used only with the state components/class component (Before 16.0).</td></tr><tr><td>Props are read-only.</td><td>State is both read and write.</td></tr></tbody></table>
+              <table className="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>
+                        <strong>PROPS</strong>
+                      </p>
+                    </td>
+                    <td>
+                      <p>
+                        <strong>STATE</strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>The Data is passed from one component to another.</td>
+                    <td>The Data is passed within the component only.</td>
+                  </tr>
+                  <tr>
+                    <td>It is Immutable (cannot be modified).</td>
+                    <td>It is Mutable ( can be modified).</td>
+                  </tr>
+                  <tr>
+                    <td>Props can be used with state and functional components.</td>
+                    <td>State can be used only with the state components/class component (Before 16.0).</td>
+                  </tr>
+                  <tr>
+                    <td>Props are read-only.</td><td>State is both read and write.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
 
         <div className="card mb-3">
-          <div className="card-header bg-warning text-white fs-5">
-            Except data load what is the use case of "UseEffect" Hook
+          <div className="card-header bg-warning fs-5">
+            ⚛️ Except data load what is the use case of "UseEffect" Hook
           </div>
           <div className="card-body">
             <div className="card-text">
