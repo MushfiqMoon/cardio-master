@@ -5,6 +5,14 @@ import { faMapPin, faWeightScale, faTextHeight } from '@fortawesome/free-solid-s
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const breaktTimer = [
+    { name: "10s", value: 10 },
+    { name: "20s", value: 20 },
+    { name: "30s", value: 30 },
+    { name: "40s", value: 40 },
+    { name: "50s", value: 50 },
+];
+
 const Sidebar = ({ durations }) => {
 
     const [breakDuration, setBreakDuration] = useState(0)
@@ -19,30 +27,13 @@ const Sidebar = ({ durations }) => {
     }
 
     // Break Handeler
-    const handleBreak = (e) => {
+    const handleBreak = (value) => {
 
-        e.currentTarget.classList.toggle('bg-warning');
-        e.currentTarget.classList.add('disabled');
+        setBreakDuration(value);
 
-        const breaktime = ~~e.target.innerText.slice(0, 2)
-
-        setBreakDuration(breaktime)
-
-
-        // Local Storage 
-
-        const previousTime = localStorage.getItem('breakTime')
-        const oldTime = JSON.parse(previousTime)
-        if (oldTime) {
-            localStorage.setItem('breakTime', JSON.stringify(oldTime))
-            console.log('ase')
-        } else {
-            localStorage.setItem('breakTime', JSON.stringify(breakDuration))
-            console.log('nai')
-        }
+        let time = value
 
     }
-
 
     return (
         <>
@@ -68,12 +59,18 @@ const Sidebar = ({ durations }) => {
 
                 <h2 className='text-warning mb-4'>Add A Break</h2>
                 <div className="d-flex align-items-center justify-content-around bg-white py-3 rounded border border-1 mb-5">
+                    {
+                        breaktTimer.map((breakTime, i) => (
+                            <div
+                                key={i}
+                                className={`break-btn text-dark rounded-circle p-2 border border-3 ${breakDuration === breakTime.value ? 'bg-warning' : ''}`}
+                                onClick={() => handleBreak(breakTime.value)}
+                            >
+                                {breakTime.name}
+                            </div>
+                        ))
+                    }
 
-                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>10s</div>
-                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>20s</div>
-                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>30s</div>
-                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>40s</div>
-                    <div className='break-btn text-dark rounded-circle p-2 border border-3' onClick={handleBreak}>50s</div>
                 </div>
 
                 <h2 className='text-warning mb-4'>Exercise Detais</h2>
@@ -99,9 +96,6 @@ const Sidebar = ({ durations }) => {
                         pauseOnHover
                     />
                 </div>
-
-
-
             </div>
         </>
     )
