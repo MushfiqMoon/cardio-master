@@ -25,10 +25,8 @@ const Activities = ({handleCardioAdd}) => {
                     </div>
                 )
             }
-
             </div>
-            
-            {/* <Blog/> */}
+            <Blog/>
         </div>
     )
 }
