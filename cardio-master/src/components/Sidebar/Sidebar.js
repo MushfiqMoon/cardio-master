@@ -9,6 +9,8 @@ const Sidebar = ({ durations }) => {
 
     const [breakDuration, setBreakDuration] = useState(0)
 
+
+
     let totalTime = 0
 
     for (const time of durations) {
