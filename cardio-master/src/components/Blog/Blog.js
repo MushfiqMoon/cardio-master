@@ -21,9 +21,9 @@ const Blog = () => {
             Difference between state and props in react
           </div>
           <div className="card-body">
-            <p className="card-text">
+            <div className="card-text">
               <table className="table"><tbody><tr><td><p><strong>PROPS</strong></p></td><td><p><strong>STATE</strong></p></td></tr><tr><td>The Data is passed from one component to another.</td><td>The Data is passed within the component only.</td></tr><tr><td>It is Immutable (cannot be modified).</td><td>It is Mutable ( can be modified).</td></tr><tr><td>Props can be used with state and functional components.</td><td>State can be used only with the state components/class component (Before 16.0).</td></tr><tr><td>Props are read-only.</td><td>State is both read and write.</td></tr></tbody></table>
-            </p>
+            </div>
           </div>
         </div>
 

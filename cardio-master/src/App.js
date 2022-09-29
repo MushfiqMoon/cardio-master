@@ -9,7 +9,8 @@ function App() {
 
   const handleCardioAdd = (event, time) => {
 
-    // event.target.classList.add('disabled')
+    event.target.classList.add('bg-secondary')
+    event.target.classList.remove('bg-warning')
     event.target.innerHTML = "Added"
 
     const newTime = [...durations, time]

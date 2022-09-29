@@ -9,16 +9,16 @@ const Sidebar = ({ durations }) => {
 
     const [breakDuration, setBreakDuration] = useState(0)
 
+    // Toast added
+    const notify = () => toast.warn('✌️ WOW! Activity Complete');
 
-
+    // Time Duration Update
     let totalTime = 0
-
     for (const time of durations) {
         totalTime += time
     }
 
-    const notify = () => toast.warn('✌️ WOW! Activity Complete');
-
+    // Break Handeler
     const handleBreak = (e) => {
 
         e.currentTarget.classList.toggle('bg-warning');
@@ -27,6 +27,20 @@ const Sidebar = ({ durations }) => {
         const breaktime = ~~e.target.innerText.slice(0, 2)
 
         setBreakDuration(breaktime)
+
+
+        // Local Storage 
+
+        const previousTime = localStorage.getItem('breakTime')
+        const oldTime = JSON.parse(previousTime)
+        if (oldTime) {
+            localStorage.setItem('breakTime', JSON.stringify(oldTime))
+            console.log('ase')
+        } else {
+            localStorage.setItem('breakTime', JSON.stringify(breakDuration))
+            console.log('nai')
+        }
+
     }
 
 
